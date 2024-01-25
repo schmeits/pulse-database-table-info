@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Schmeits\PulseDatabaseTableSizes\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class PulseDatabaseTableSizesCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'pulse-database-table-sizes';
 
     public $description = 'My command';
 

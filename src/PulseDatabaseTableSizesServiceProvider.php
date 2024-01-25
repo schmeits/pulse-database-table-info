@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace Schmeits\PulseDatabaseTableSizes;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use Schmeits\PulseDatabaseTableSizes\Commands\PulseDatabaseTableSizesCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class PulseDatabaseTableSizesServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('pulse-database-table-sizes')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_pulse-database-table-sizes_table')
+            ->hasCommand(PulseDatabaseTableSizesCommand::class);
     }
 }
