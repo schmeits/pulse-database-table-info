@@ -18,7 +18,8 @@
     "require": {
         "php": "^8.1",
         "spatie/laravel-package-tools": "^1.14.0",
-        "illuminate/contracts": "^10.0"
+        "illuminate/contracts": "^10.0",
+        "laravel/pulse": "^1.0@beta"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
@@ -35,8 +36,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Schmeits\\PulseDatabaseTableSizes\\": "src/",
-            "Schmeits\\PulseDatabaseTableSizes\\Database\\Factories\\": "database/factories/"
+            "Schmeits\\PulseDatabaseTableSizes\\": "src/"
         }
     },
     "autoload-dev": {
@@ -74,10 +74,7 @@
         "laravel": {
             "providers": [
                 "Schmeits\\PulseDatabaseTableSizes\\PulseDatabaseTableSizesServiceProvider"
-            ],
-            "aliases": {
-                "PulseDatabaseTableSizes": "Schmeits\\PulseDatabaseTableSizes\\Facades\\PulseDatabaseTableSizes"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
