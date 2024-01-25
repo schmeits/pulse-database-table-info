@@ -2,9 +2,9 @@
 
 namespace Schmeits\PulseDatabaseTableSizes;
 
+use Schmeits\PulseDatabaseTableSizes\Commands\PulseDatabaseTableSizesCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Schmeits\PulseDatabaseTableSizes\Commands\PulseDatabaseTableSizesCommand;
 
 class PulseDatabaseTableSizesServiceProvider extends PackageServiceProvider
 {
