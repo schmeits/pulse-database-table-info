@@ -9,6 +9,7 @@
                 label="Sort by"
                 :options="[
                     'size' => 'size',
+                    'rows' => 'rows',
                     'name' => 'name',
                 ]"
                 @change="loading = true"
@@ -22,13 +23,15 @@
         @else
             <x-pulse::table>
                 <colgroup>
-                    <col width="80%" />
+                    <col width="60%" />
+                    <col width="20%" />
                     <col width="20%" />
                 </colgroup>
                 <x-pulse::thead>
                     <tr>
-                        <x-pulse::th>Tablename</x-pulse::th>
+                        <x-pulse::th>Table name</x-pulse::th>
                         <x-pulse::th>Size</x-pulse::th>
+                        <x-pulse::th>Rowcount</x-pulse::th>
                     </tr>
                 </x-pulse::thead>
                 <tbody>
@@ -42,6 +45,9 @@
                         </x-pulse::td>
                         <x-pulse::td class="text-gray-700 dark:text-gray-300 font-bold">
                             {{ Number::fileSize($result->size, maxPrecision: 3) }}
+                        </x-pulse::td>
+                        <x-pulse::td class="text-gray-700 dark:text-gray-300 font-bold">
+                            {{ $result->rowcount }}
                         </x-pulse::td>
                     </tr>
                 @endforeach

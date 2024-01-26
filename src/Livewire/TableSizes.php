@@ -28,7 +28,11 @@ class TableSizes extends Card
             }
         );
 
-        $value = ($this->orderBy === 'size' ? $value->sortByDesc('size') : $value->sortBy('name'));
+        $value = match (true) {
+            $this->orderBy === 'size' => $value->sortByDesc('size'),
+            $this->orderBy === 'rows' => $value->sortByDesc('rows'),
+            default => $value->sortBy('name')
+        };
 
         return view('pulse-database-table-sizes::livewire.table-sizes', [
             'results' => $value ?? collect(),

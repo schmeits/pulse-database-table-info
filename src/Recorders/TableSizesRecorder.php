@@ -38,6 +38,7 @@ class TableSizesRecorder
                 return [
                     'name' => $obj->tablename,
                     'size' => $obj->size,
+                    'rows' => $obj->rowcount ?? 0,
                 ];
             })->toJson();
 
@@ -64,13 +65,13 @@ class TableSizesRecorder
     private function getTableSizesMysql(ConnectionInterface $connection): array
     {
         return $connection->select(
-            'SELECT table_name as tablename, (data_length + index_length) AS size FROM information_schema.TABLES WHERE table_schema = ?',
+            'SELECT table_name as tablename, (data_length + index_length) AS size, TABLE_ROWS as rowcount FROM information_schema.TABLES WHERE table_schema = ?',
             [$connection->getDatabaseName()]
         );
     }
 
     private function getTableSizesPostgres(ConnectionInterface $connection): array
     {
-        return $connection->select('SELECT relname AS "tablename", pg_total_relation_size(relid) AS "size" FROM pg_catalog.pg_statio_user_tables');
+        return $connection->select('SELECT relname AS "tablename", pg_total_relation_size(relid) AS "size", n_live_tup as "rowcount" FROM pg_stat_user_tables');
     }
 }
