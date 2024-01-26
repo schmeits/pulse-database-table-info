@@ -17,7 +17,16 @@ class TableSizes extends Card
     public function render(): View
     {
         [$value] = $this->remember(
-            fn () => collect(json_decode(Pulse::values('database-tables-sizes', ['result'])->first()->value))
+            function () {
+                $results_from_recorder = Pulse::values('database-tables-sizes', ['result']);
+
+                if ($results_from_recorder->isEmpty())
+                {
+                    return collect();
+                }
+
+                return collect(json_decode($results_from_recorder)->first()->value);
+            }
         );
 
         $value = ($this->orderBy === 'size' ? $value->sortByDesc('size') : $value->sortBy('name'));
