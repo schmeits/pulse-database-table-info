@@ -26,7 +26,7 @@ return [
     // ...
     
     'recorders' => [
-+        \Schmeits\PulseDatabaseTableInfo\Recorders\TableInfoRecorder::class => [],
++        \Schmeits\Pulse\DatabaseTableInfo\Recorders\TableInfoRecorder::class => [],
     ]
 ]
 ```
