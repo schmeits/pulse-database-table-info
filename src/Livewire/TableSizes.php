@@ -24,7 +24,7 @@ class TableSizes extends Card
                     return collect();
                 }
 
-                return collect(json_decode($results_from_recorder)->first()->value);
+                return collect(json_decode($results_from_recorder->first()->value));
             }
         );
 
