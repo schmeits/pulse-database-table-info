@@ -2,6 +2,10 @@
 
 All notable changes to `pulse-database-table-info` will be documented in this file.
 
+## 1.5.0 - 2024-01-26
+
+- Added the possibility to ignore databases
+
 ## 1.4.5 - 2024-01-26
 
 - Readme and screenshots updated
