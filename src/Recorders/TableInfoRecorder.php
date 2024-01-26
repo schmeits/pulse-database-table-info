@@ -9,7 +9,7 @@ use Illuminate\Database\MySqlConnection;
 use Illuminate\Database\PostgresConnection;
 use Laravel\Pulse\Events\SharedBeat;
 use Laravel\Pulse\Pulse;
-use Schmeits\PulseDatabaseTableSizes\Exceptions\DatabaseNotSupported;
+use Schmeits\PulseDatabaseTableInfo\Exceptions\DatabaseNotSupported;
 
 class TableInfoRecorder
 {

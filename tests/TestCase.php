@@ -1,10 +1,10 @@
 <?php
 
-namespace Schmeits\PulseDatabaseTableSizes\Tests;
+namespace Schmeits\PulseDatabaseTableInfo\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Schmeits\PulseDatabaseTableSizes\PulseDatabaseTableInfoServiceProvider;
+use Schmeits\PulseDatabaseTableInfo\PulseDatabaseTableInfoServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,7 +13,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Schmeits\\PulseDatabaseTableSizes\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Schmeits\\PulseDatabaseTableInfo\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
