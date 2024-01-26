@@ -2,6 +2,10 @@
 
 All notable changes to `pulse-database-table-sizes` will be documented in this file.
 
+## 1.4.1 - 2024-01-26
+
+- Bugfix renamed view
+
 ## 1.4.0 - 2024-01-26
 
 - Renamed package
