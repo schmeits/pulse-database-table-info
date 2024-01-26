@@ -1,6 +1,6 @@
 <?php
 
-namespace Schmeits\PulseDatabaseTableSizes\Exceptions;
+namespace Schmeits\PulseDatabaseTableInfo\Exceptions;
 
 use Exception;
 use Illuminate\Database\ConnectionInterface;

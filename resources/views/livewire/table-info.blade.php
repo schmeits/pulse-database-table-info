@@ -1,5 +1,5 @@
 <x-pulse::card id="pulse-table-sizes" :cols="$cols" :rows="$rows" :class="$class" wire:poll.5s="">
-    <x-pulse::card-header name="Table Sizes">
+    <x-pulse::card-header name="Table Info">
         <x-slot:icon>
             <x-pulse::icons.circle-stack></x-pulse::icons.circle-stack>
         </x-slot:icon>

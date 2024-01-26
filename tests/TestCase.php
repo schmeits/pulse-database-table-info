@@ -4,7 +4,7 @@ namespace Schmeits\PulseDatabaseTableSizes\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Schmeits\PulseDatabaseTableSizes\PulseDatabaseTableSizesServiceProvider;
+use Schmeits\PulseDatabaseTableSizes\PulseDatabaseTableInfoServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -20,7 +20,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            PulseDatabaseTableSizesServiceProvider::class,
+            PulseDatabaseTableInfoServiceProvider::class,
         ];
     }
 

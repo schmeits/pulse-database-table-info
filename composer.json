@@ -1,12 +1,14 @@
 {
-    "name": "schmeits/pulse-database-table-sizes",
-    "description": "A Laravel Pulse card displaying the table sizes of the current database.",
+    "name": "schmeits/pulse-database-table-info",
+    "description": "A Laravel Pulse card displaying the table info of the current database.",
     "keywords": [
         "schmeits",
         "laravel",
-        "pulse-database-table-sizes"
+        "pulse",
+        "livewire",
+        "pulse-database-table-info"
     ],
-    "homepage": "https://github.com/schmeits/pulse-database-table-sizes",
+    "homepage": "https://github.com/schmeits/pulse-database-table-info",
     "license": "MIT",
     "authors": [
         {
@@ -36,18 +38,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Schmeits\\PulseDatabaseTableSizes\\": "src/"
+            "Schmeits\\PulseDatabaseTableInfo\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Schmeits\\PulseDatabaseTableSizes\\Tests\\": "tests/",
+            "Schmeits\\PulseDatabaseTableInfo\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-pulse-database-table-sizes --ansi",
+        "clear": "@php vendor/bin/testbench package:purge-pulse-database-table-info --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "build": [
             "@composer run prepare",
@@ -73,7 +75,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Schmeits\\PulseDatabaseTableSizes\\PulseDatabaseTableSizesServiceProvider"
+              "PulseDatabaseTableInfoServiceProvider"
             ]
         }
     },

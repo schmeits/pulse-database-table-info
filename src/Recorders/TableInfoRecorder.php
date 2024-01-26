@@ -1,6 +1,6 @@
 <?php
 
-namespace Schmeits\PulseDatabaseTableSizes\Recorders;
+namespace Schmeits\PulseDatabaseTableInfo\Recorders;
 
 use Illuminate\Config\Repository;
 use Illuminate\Database\ConnectionInterface;
@@ -11,7 +11,7 @@ use Laravel\Pulse\Events\SharedBeat;
 use Laravel\Pulse\Pulse;
 use Schmeits\PulseDatabaseTableSizes\Exceptions\DatabaseNotSupported;
 
-class TableSizesRecorder
+class TableInfoRecorder
 {
     public string $listen = SharedBeat::class;
 
@@ -44,7 +44,7 @@ class TableSizesRecorder
 
             json_decode($results, flags: JSON_THROW_ON_ERROR);
 
-            $this->pulse->set('database-tables-sizes', 'result', $results);
+            $this->pulse->set('database-tables-info', 'result', $results);
         });
     }
 

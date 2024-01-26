@@ -1,6 +1,6 @@
 <?php
 
-namespace Schmeits\PulseDatabaseTableSizes\Livewire;
+namespace Schmeits\PulseDatabaseTableInfo\Livewire;
 
 use Illuminate\Contracts\View\View;
 use Laravel\Pulse\Facades\Pulse;
@@ -9,7 +9,7 @@ use Livewire\Attributes\Lazy;
 use Livewire\Attributes\Url;
 
 #[Lazy]
-class TableSizes extends Card
+class TableInfo extends Card
 {
     #[Url(as: 'table-sizes')]
     public string $orderBy = 'size';
@@ -18,7 +18,7 @@ class TableSizes extends Card
     {
         [$value] = $this->remember(
             function () {
-                $results_from_recorder = Pulse::values('database-tables-sizes', ['result']);
+                $results_from_recorder = Pulse::values('database-tables-info', ['result']);
 
                 if ($results_from_recorder->isEmpty()) {
                     return collect();

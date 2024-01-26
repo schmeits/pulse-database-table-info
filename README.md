@@ -1,11 +1,11 @@
-# A Laravel Pulse card displaying the table sizes of the current database.
+# A Laravel Pulse card displaying the table info of the current database.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/schmeits/pulse-database-table-sizes.svg?style=flat-square)](https://packagist.org/packages/schmeits/pulse-database-table-sizes)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/schmeits/pulse-database-table-sizes/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/schmeits/pulse-database-table-sizes/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/schmeits/pulse-database-table-sizes/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/schmeits/pulse-database-table-sizes/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/schmeits/pulse-database-table-sizes.svg?style=flat-square)](https://packagist.org/packages/schmeits/pulse-database-table-sizes)
 
-This pulse card displays the tables in the database with their corresponding sizes.
+This pulse card displays the tables in the database with their corresponding info (size and rows).
 
 ![example-screenshot.png](docs-assets%2Fscreenshots%2Fexample-screenshot.png)
 
@@ -14,19 +14,19 @@ This pulse card displays the tables in the database with their corresponding siz
 You can install the package via composer:
 
 ```bash
-composer require schmeits/pulse-database-table-sizes
+composer require schmeits/pulse-database-table-info
 ```
 
 ## Register the recorder
 
-To run the checks you must add the `TableSizesRecorder` to the `pulse.php` file.
+To run the checks you must add the `TableInfoRecorder` to the `pulse.php` file.
 
 ```diff
 return [
     // ...
     
     'recorders' => [
-+        \Schmeits\PulseDatabaseTableSizes\Recorders\TableSizesRecorder::class => [],
++        \Schmeits\PulseDatabaseTableInfo\Recorders\TableInfoRecorder::class => [],
     ]
 ]
 ```
