@@ -75,7 +75,7 @@
     "extra": {
         "laravel": {
             "providers": [
-              "Schmeits\\Pulse\\DatabaseTableSizes\\PulseDatabaseTableInfoServiceProvider"
+              "Schmeits\\Pulse\\DatabaseTableInfo\\PulseDatabaseTableInfoServiceProvider"
             ]
         }
     },
