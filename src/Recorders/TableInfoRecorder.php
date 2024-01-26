@@ -9,10 +9,13 @@ use Illuminate\Database\MySqlConnection;
 use Illuminate\Database\PostgresConnection;
 use Laravel\Pulse\Events\SharedBeat;
 use Laravel\Pulse\Pulse;
+use Laravel\Pulse\Recorders\Concerns;
 use Schmeits\Pulse\DatabaseTableInfo\Exceptions\DatabaseNotSupported;
 
 class TableInfoRecorder
 {
+    use Concerns\Ignores;
+
     public string $listen = SharedBeat::class;
 
     /**
@@ -35,11 +38,17 @@ class TableInfoRecorder
             $results = $this->getTableInfo($connection);
 
             $results = collect($results)->map(function ($obj) {
+                if ($this->shouldIgnore($obj->tablename)) {
+                    return [];
+                }
+
                 return [
                     'name' => $obj->tablename,
                     'size' => $obj->size,
                     'rows' => $obj->rowcount ?? 0,
                 ];
+            })->reject(function ($obj) {
+                return empty($obj);
             })->toJson();
 
             json_decode($results, flags: JSON_THROW_ON_ERROR);
