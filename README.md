@@ -7,6 +7,8 @@
 
 This pulse card displays the tables in the database with their corresponding sizes.
 
+![example-screenshot.png](docs-assets%2Fscreenshots%2Fexample-screenshot.png)
+
 ## Installation
 
 You can install the package via composer:
