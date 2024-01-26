@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `pulse-database-table-sizes` will be documented in this file.
+All notable changes to `pulse-database-table-info` will be documented in this file.
 
 ## 1.4.1 - 2024-01-26
 

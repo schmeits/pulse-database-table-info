@@ -32,7 +32,7 @@ class TableInfoRecorder
 
             $connection = app(ConnectionResolverInterface::class)->connection($connectionName);
 
-            $results = $this->getTableSizes($connection);
+            $results = $this->getTableInfo($connection);
 
             $results = collect($results)->map(function ($obj) {
                 return [
@@ -53,16 +53,16 @@ class TableInfoRecorder
         return config('database.default');
     }
 
-    private function getTableSizes(ConnectionInterface $connection): array
+    private function getTableInfo(ConnectionInterface $connection): array
     {
         return match (true) {
-            $connection instanceof MySqlConnection => $this->getTableSizesMysql($connection),
-            $connection instanceof PostgresConnection => $this->getTableSizesPostgres($connection),
+            $connection instanceof MySqlConnection => $this->getTableInfoMySql($connection),
+            $connection instanceof PostgresConnection => $this->getTableInfoPostgres($connection),
             default => throw DatabaseNotSupported::make($connection),
         };
     }
 
-    private function getTableSizesMysql(ConnectionInterface $connection): array
+    private function getTableInfoMySql(ConnectionInterface $connection): array
     {
         return $connection->select(
             'SELECT table_name as tablename, (data_length + index_length) AS size, TABLE_ROWS as rowcount FROM information_schema.TABLES WHERE table_schema = ?',
@@ -70,7 +70,7 @@ class TableInfoRecorder
         );
     }
 
-    private function getTableSizesPostgres(ConnectionInterface $connection): array
+    private function getTableInfoPostgres(ConnectionInterface $connection): array
     {
         return $connection->select('SELECT relname AS "tablename", pg_total_relation_size(relid) AS "size", n_live_tup as "rowcount" FROM pg_stat_user_tables');
     }

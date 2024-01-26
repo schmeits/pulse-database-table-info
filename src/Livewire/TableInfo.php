@@ -11,7 +11,7 @@ use Livewire\Attributes\Url;
 #[Lazy]
 class TableInfo extends Card
 {
-    #[Url(as: 'table-sizes')]
+    #[Url(as: 'table-info')]
     public string $orderBy = 'size';
 
     public function render(): View
@@ -34,7 +34,7 @@ class TableInfo extends Card
             default => $value->sortBy('name')
         };
 
-        return view('pulse-database-table-sizes::livewire.table-info', [
+        return view('pulse-database-table-info::livewire.table-info', [
             'results' => $value ?? collect(),
         ]);
     }

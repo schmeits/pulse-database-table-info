@@ -1,9 +1,9 @@
 # A Laravel Pulse card displaying the table info of the current database.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/schmeits/pulse-database-table-sizes.svg?style=flat-square)](https://packagist.org/packages/schmeits/pulse-database-table-sizes)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/schmeits/pulse-database-table-sizes/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/schmeits/pulse-database-table-sizes/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/schmeits/pulse-database-table-sizes/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/schmeits/pulse-database-table-sizes/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/schmeits/pulse-database-table-sizes.svg?style=flat-square)](https://packagist.org/packages/schmeits/pulse-database-table-sizes)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/schmeits/pulse-database-table-info.svg?style=flat-square)](https://packagist.org/packages/schmeits/pulse-database-table-info)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/schmeits/pulse-database-table-info/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/schmeits/pulse-database-table-info/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/schmeits/pulse-database-table-info/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/schmeits/pulse-database-table-info/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/schmeits/pulse-database-table-info.svg?style=flat-square)](https://packagist.org/packages/schmeits/pulse-database-table-info)
 
 This pulse card displays the tables in the database with their corresponding info (size and rows).
 
@@ -41,7 +41,7 @@ Then, you can modify the `dashboard.blade.php` file:
 
 ```diff
 <x-pulse>
-+    <livewire:pulse.table-sizes cols='4' rows='2' />
++    <livewire:pulse.table-info cols='4' rows='2' />
 
     <livewire:pulse.servers cols="full" />
 
