@@ -2,6 +2,10 @@
 
 All notable changes to `pulse-database-table-info` will be documented in this file.
 
+## 1.4.5 - 2024-01-26
+
+- Readme and screenshots updated
+
 ## 1.4.4 - 2024-01-26
 
 - Typo
