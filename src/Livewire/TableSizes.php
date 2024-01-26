@@ -12,7 +12,7 @@ use Livewire\Attributes\Url;
 class TableSizes extends Card
 {
     #[Url(as: 'table-sizes')]
-    public string $orderBy = 'name';
+    public string $orderBy = 'size';
 
     public function render(): View
     {

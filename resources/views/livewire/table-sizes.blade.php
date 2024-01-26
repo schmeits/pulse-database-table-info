@@ -8,8 +8,8 @@
                 wire:model.live="orderBy"
                 label="Sort by"
                 :options="[
-                    'name' => 'name',
                     'size' => 'size',
+                    'name' => 'name',
                 ]"
                 @change="loading = true"
             />
