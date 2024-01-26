@@ -34,7 +34,7 @@ class TableInfo extends Card
             default => $value->sortBy('name')
         };
 
-        return view('pulse-database-table-sizes::livewire.table-sizes', [
+        return view('pulse-database-table-sizes::livewire.table-info', [
             'results' => $value ?? collect(),
         ]);
     }
