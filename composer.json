@@ -38,12 +38,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Schmeits\\PulseDatabaseTableInfo\\": "src/"
+            "Schmeits\\Pulse\\DatabaseTableInfo\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Schmeits\\PulseDatabaseTableInfo\\Tests\\": "tests/",
+            "Schmeits\\Pulse\\DatabaseTableInfo\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -75,7 +75,7 @@
     "extra": {
         "laravel": {
             "providers": [
-              "PulseDatabaseTableInfoServiceProvider"
+              "Schmeits\\Pulse\\DatabaseTableSizes\\PulseDatabaseTableInfoServiceProvider"
             ]
         }
     },

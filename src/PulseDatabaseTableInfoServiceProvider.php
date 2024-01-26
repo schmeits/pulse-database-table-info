@@ -1,10 +1,10 @@
 <?php
 
-namespace Schmeits\PulseDatabaseTableInfo;
+namespace Schmeits\Pulse\DatabaseTableInfo;
 
 use Illuminate\Foundation\Application;
 use Livewire\LivewireManager;
-use Schmeits\PulseDatabaseTableInfo\Livewire\TableInfo;
+use Schmeits\Pulse\DatabaseTableInfo\Livewire\TableInfo;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Schmeits\PulseDatabaseTableInfo\Livewire;
+namespace Schmeits\Pulse\DatabaseTableInfo\Livewire;
 
 use Illuminate\Contracts\View\View;
 use Laravel\Pulse\Facades\Pulse;

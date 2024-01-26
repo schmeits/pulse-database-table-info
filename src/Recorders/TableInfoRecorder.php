@@ -1,6 +1,6 @@
 <?php
 
-namespace Schmeits\PulseDatabaseTableInfo\Recorders;
+namespace Schmeits\Pulse\DatabaseTableInfo\Recorders;
 
 use Illuminate\Config\Repository;
 use Illuminate\Database\ConnectionInterface;
@@ -9,7 +9,7 @@ use Illuminate\Database\MySqlConnection;
 use Illuminate\Database\PostgresConnection;
 use Laravel\Pulse\Events\SharedBeat;
 use Laravel\Pulse\Pulse;
-use Schmeits\PulseDatabaseTableInfo\Exceptions\DatabaseNotSupported;
+use Schmeits\Pulse\DatabaseTableInfo\Exceptions\DatabaseNotSupported;
 
 class TableInfoRecorder
 {

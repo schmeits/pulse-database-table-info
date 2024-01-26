@@ -1,5 +1,5 @@
 <?php
 
-use Schmeits\PulseDatabaseTableInfo\Tests\TestCase;
+use Schmeits\Pulse\DatabaseTableInfo\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

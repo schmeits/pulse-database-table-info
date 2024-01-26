@@ -1,10 +1,10 @@
 <?php
 
-namespace Schmeits\PulseDatabaseTableInfo\Tests;
+namespace Schmeits\Pulse\DatabaseTableInfo\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Schmeits\PulseDatabaseTableInfo\PulseDatabaseTableInfoServiceProvider;
+use Schmeits\Pulse\DatabaseTableInfo\PulseDatabaseTableInfoServiceProvider;
 
 class TestCase extends Orchestra
 {
