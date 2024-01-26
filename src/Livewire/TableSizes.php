@@ -20,8 +20,7 @@ class TableSizes extends Card
             function () {
                 $results_from_recorder = Pulse::values('database-tables-sizes', ['result']);
 
-                if ($results_from_recorder->isEmpty())
-                {
+                if ($results_from_recorder->isEmpty()) {
                     return collect();
                 }
 
