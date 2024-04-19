@@ -32,9 +32,9 @@
     </logging>
     <php>
         <env name="APP_KEY" value="AckfSECXIvnK5r28GVIWUAxmbBSjTsmF"/>
-        <env name="MYSQL_DATABASE" value="test" />
-        <env name="MYSQL_USERNAME" value="root" />
-        <env name="MYSQL_PASSWORD" value="(null)" />
+<!--        <env name="MYSQL_DATABASE" value=":MEMORY:" />-->
+<!--        <env name="MYSQL_USERNAME" value="root" />-->
+<!--        <env name="MYSQL_PASSWORD" value="(null)" />-->
     </php>
     <source>
         <include>
