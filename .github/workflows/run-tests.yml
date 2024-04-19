@@ -30,9 +30,16 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        php: [8.1, 8.2, 8.3]
+        php: [8.2, 8.3]
         laravel: [10, 11]
         stability: [prefer-lowest, prefer-stable]
+        include:
+          - laravel: 10.*
+            testbench: ^8.0
+            collision: ^7.0
+          - laravel: 11.*
+            testbench: ^9.0
+            collision: ^8.0
     name: PHP ${{ matrix.php }} - Laravel ${{ matrix.laravel }} - Stability ${{ matrix.stability }} - MySQL 5.7
     steps:
       - name: Checkout code
@@ -84,6 +91,13 @@ jobs:
       matrix:
         php: [8.2, 8.3]
         laravel: [10, 11]
+        include:
+          - laravel: 10.*
+            testbench: ^8.0
+            collision: ^7.0
+          - laravel: 11.*
+            testbench: ^9.0
+            collision: ^8.0
 
     name: PHP ${{ matrix.php }} - Laravel ${{ matrix.laravel }} - Stability ${{ matrix.stability }} - PostgreSQL 14
 
