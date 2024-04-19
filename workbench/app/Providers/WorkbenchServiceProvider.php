@@ -2,8 +2,8 @@
 
 namespace Workbench\App\Providers;
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use Schmeits\Pulse\DatabaseTableInfo\Recorders\TableInfoRecorder;
 
 class WorkbenchServiceProvider extends ServiceProvider
 {
@@ -12,7 +12,14 @@ class WorkbenchServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        config(['pulse.recorders' => [
+            TableInfoRecorder::class => [
+                'enabled' => true,
+                'ignore' => [
+                    '#^test123#',
+                ],
+            ],
+        ]]);
     }
 
     /**
@@ -20,6 +27,6 @@ class WorkbenchServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Route::view('/', 'welcome');
+
     }
 }

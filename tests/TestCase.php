@@ -2,35 +2,12 @@
 
 namespace Schmeits\Pulse\DatabaseTableInfo\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Orchestra\Testbench\Concerns\WithWorkbench;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Schmeits\Pulse\DatabaseTableInfo\PulseDatabaseTableInfoServiceProvider;
 
 class TestCase extends Orchestra
 {
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Schmeits\\PulseDatabaseTableInfo\\Database\\Factories\\'.class_basename($modelName).'Factory'
-        );
-    }
-
-    protected function getPackageProviders($app)
-    {
-        return [
-            PulseDatabaseTableInfoServiceProvider::class,
-        ];
-    }
-
-    public function getEnvironmentSetUp($app)
-    {
-        config()->set('database.default', 'testing');
-
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_pulse-database-table-info_table.php.stub';
-        $migration->up();
-        */
-    }
+    //use DatabaseTransactions;
+    use WithWorkbench;
 }

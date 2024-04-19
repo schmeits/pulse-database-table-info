@@ -30,6 +30,12 @@
     <logging>
         <junit outputFile="build/report.junit.xml"/>
     </logging>
+    <php>
+        <env name="APP_KEY" value="AckfSECXIvnK5r28GVIWUAxmbBSjTsmF"/>
+        <env name="MYSQL_DATABASE" value="test" />
+        <env name="MYSQL_USERNAME" value="root" />
+        <env name="MYSQL_PASSWORD" value="(null)" />
+    </php>
     <source>
         <include>
             <directory suffix=".php">./src</directory>
