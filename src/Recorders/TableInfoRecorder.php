@@ -51,7 +51,7 @@ class TableInfoRecorder
                 return empty($obj);
             })->toJson();
 
-            json_decode($results, flags: JSON_THROW_ON_ERROR);
+            json_decode($results, options: JSON_THROW_ON_ERROR);
 
             $this->pulse->set('database-tables-info', 'result', $results);
         });
