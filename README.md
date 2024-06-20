@@ -33,6 +33,18 @@ return [
 
 You also need to be running [the `pulse:check` command](https://laravel.com/docs/10.x/pulse#dashboard-cards).
 
+## Configure the recorder
+```php
+\Schmeits\Pulse\DatabaseTableInfo\Recorders\TableInfoRecorder::class => [
+    'enabled' => env('PULSE_DATABASE_TABLE_ENABLED', true), // ebabling the recorder
+    'ignore' => [
+        '#^pulse#', // Ignore pulse entries...
+        '#^telescope#', // Ignore telescope entries...
+        '#^health_check_result#', // ignore health_check_results
+    ],
+],
+```
+
 ## Add to your dashboard
 
 To add the card to the Pulse dashboard, you must first [publish the vendor view](https://laravel.com/docs/10.x/pulse#dashboard-customization).
