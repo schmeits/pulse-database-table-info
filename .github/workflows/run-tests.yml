@@ -36,7 +36,7 @@ jobs:
         include:
           - laravel: 10.*
             testbench: 8.*
-            collision: ^7.5
+            collision: ^7.9
           - laravel: 11.*
             testbench: 9.*
             collision: ^8.1
