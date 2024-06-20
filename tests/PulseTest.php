@@ -17,15 +17,19 @@ it('shows the table on the dashboard', function () {
 
     // fake table data
     $pulsedata = collect([
-        ['name' => 'testtable2', 'size' => 98765, 'rows' => 15],
-        ['name' => 'test123', 'size' => 222222, 'rows' => 2],
+        ['name' => 'testtable2', 'size' => 98765, 'rows' => 12345],
+        ['name' => 'test123', 'size' => 222222, 'rows' => 54321],
     ]);
 
     // send to pulse
     Pulse::set('database-tables-info', 'result', $pulsedata->toJson());
 
+    Pulse::ingest();
+
     // assert
     Livewire::test(TableInfo::class, ['lazy' => false])
-        ->assertSee(['testtable2', '96.45 KB', '15']);
+        ->assertStatus(200)
+        ->assertSee(['testtable2', '96.45 KB', '12345'])
+        ->assertSee(['test123', '217.014 KB', '54321']);
 
 });
