@@ -11,7 +11,7 @@ seeders:
   - Workbench\Database\Seeders\DatabaseSeeder
 
 env:
-  - DB_NAME=laravel
+  - DB_DATABASE=laravel
 
 workbench:
   start: '/pulse'
