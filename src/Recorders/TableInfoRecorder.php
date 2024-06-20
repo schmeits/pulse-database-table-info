@@ -51,6 +51,7 @@ class TableInfoRecorder
                 return empty($obj);
             })->toJson();
 
+            // this call is only to validate the created JSON
             json_decode($results, flags: JSON_THROW_ON_ERROR);
 
             $this->pulse->set('database-tables-info', 'result', $results);
