@@ -2,6 +2,12 @@
 
 All notable changes to `pulse-database-table-info` will be documented in this file.
 
+## 1.7.0 - 2024-06-20
+
+- Using full \Illuminate\Support\Number namespace in blade template (suggested by @sunmingyang)
+- Upgraded pulse version to ^1.1
+- Added tests
+
 ## 1.6.0 - 2024-04-09
 
 Added support for Laravel 11
