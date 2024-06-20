@@ -10,6 +10,9 @@ migrations:
 seeders:
   - Workbench\Database\Seeders\DatabaseSeeder
 
+env:
+  - DB_NAME=laravel
+
 workbench:
   start: '/pulse'
   user: 'tally@schmeits.com'
