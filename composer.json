@@ -27,7 +27,7 @@
         "larastan/larastan": "^2.0.1",
         "laravel/pint": "^1.0",
         "livewire/livewire": "^3.4",
-        "nunomaduro/collision": "7.9",
+        "nunomaduro/collision": "7.10.0",
         "orchestra/testbench": "8.*",
         "pestphp/pest": "^2.20",
         "pestphp/pest-plugin-arch": "^2.0",
