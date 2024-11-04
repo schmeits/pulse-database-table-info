@@ -2,6 +2,10 @@
 
 All notable changes to `pulse-database-table-info` will be documented in this file.
 
+## 1.7.1 - 2024-11-04
+
+Fix: Result size being null (reported by @dmitry-buzzwoo)
+
 ## 1.7.0 - 2024-06-20
 
 - Using full \Illuminate\Support\Number namespace in blade template (suggested by @sunmingyang)
