@@ -20,7 +20,7 @@ class TableInfo extends Card
         'size' => 'size',
         'rows' => 'rows',
         'name' => 'name',
-        'fragmentation' => 'fragmentation'
+        'fragmentation' => 'fragmentation',
     ];
 
     public function render(): View
@@ -45,7 +45,7 @@ class TableInfo extends Card
 
         return view('pulse-database-table-info::livewire.table-info', [
             'results' => $value ?? collect(),
-            'show-fragmentation' => Config::get("pulse.recorders." . TableInfoRecorder::class . ".show_fragmentation", false)
+            'show-fragmentation' => Config::get('pulse.recorders.'.TableInfoRecorder::class.'.show_fragmentation', false),
         ]);
     }
 }
