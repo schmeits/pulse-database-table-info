@@ -15,6 +15,7 @@ class WorkbenchServiceProvider extends ServiceProvider
         config(['pulse.recorders' => [
             TableInfoRecorder::class => [
                 'enabled' => true,
+                'show_fragmentation' => true,
                 'ignore' => [
                     '#^test123#',
                 ],

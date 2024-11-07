@@ -7,11 +7,7 @@
             <x-pulse::select
                 wire:model.live="orderBy"
                 label="Sort by"
-                :options="[
-                    'size' => 'size',
-                    'rows' => 'rows',
-                    'name' => 'name',
-                ]"
+                :options="$sort_options"
                 @change="loading = true"
             />
         </x-slot:actions>
@@ -23,15 +19,21 @@
         @else
             <x-pulse::table>
                 <colgroup>
-                    <col width="60%" />
-                    <col width="20%" />
-                    <col width="20%" />
+                    <col width="45%" />
+                    <col width="15%" />
+                    <col width="15%" />
+                    @if ($show_fragmentation)
+                        <col width="15%" />
+                    @endif
                 </colgroup>
                 <x-pulse::thead>
                     <tr>
                         <x-pulse::th>Table name</x-pulse::th>
                         <x-pulse::th>Size</x-pulse::th>
                         <x-pulse::th>Rowcount</x-pulse::th>
+                        @if ($show_fragmentation)
+                            <x-pulse::th>Fragmentation</x-pulse::th>
+                        @endif
                     </tr>
                 </x-pulse::thead>
                 <tbody>
@@ -49,6 +51,11 @@
                         <x-pulse::td class="text-gray-700 dark:text-gray-300 font-bold">
                             {{ $result->rows }}
                         </x-pulse::td>
+                        @if ($show_fragmentation)
+                            <x-pulse::td class="text-gray-700 dark:text-gray-300 font-bold">
+                                {{ $result->fragmentation }}
+                            </x-pulse::td>
+                        @endif
                     </tr>
                 @endforeach
                 </tbody>
