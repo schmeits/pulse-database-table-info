@@ -44,7 +44,7 @@
                             </code>
                         </x-pulse::td>
                         <x-pulse::td class="text-gray-700 dark:text-gray-300 font-bold">
-                            {{ \Illuminate\Support\Number::fileSize($result->size ?? 0, maxPrecision: 3) }}
+                            {{ \Illuminate\Support\Number::fileSize($result->size ?? 0, maxPrecision: 2) }}
                         </x-pulse::td>
                         <x-pulse::td class="text-gray-700 dark:text-gray-300 font-bold">
                             {{ $result->rows }}
