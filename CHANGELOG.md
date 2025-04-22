@@ -2,6 +2,10 @@
 
 All notable changes to `pulse-database-table-info` will be documented in this file.
 
+## 1.7.2 - 2025-04-22
+
+Feature: Based on the PR #14 from @adriaanzon I added the precision of the table size to the config file so you can modify that to fit your needs in your projects
+
 ## 1.7.1 - 2024-11-04
 
 Fix: Result size being null (reported by @dmitry-buzzwoo)
