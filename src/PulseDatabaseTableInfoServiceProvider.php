@@ -14,6 +14,7 @@ class PulseDatabaseTableInfoServiceProvider extends PackageServiceProvider
     {
         $package
             ->name('pulse-database-table-info')
+            ->hasConfigFile()
             ->hasViews();
     }
 
